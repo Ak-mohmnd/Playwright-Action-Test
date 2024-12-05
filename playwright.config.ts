@@ -28,9 +28,11 @@ export default defineConfig({
   },
 
   use: {
+
     // Use baseURL so to make navigations relative.
     // More information: https://playwright.dev/docs/api/class-testoptions#test-options-base-url
     baseURL,
+    headless: false,
 
     // Retry a test if its failing with enabled tracing. This allows you to analyze the DOM, console logs, network traffic etc.
     // More information: https://playwright.dev/docs/trace-viewer
@@ -49,25 +51,25 @@ export default defineConfig({
         ...devices["Desktop Chrome"],
       },
     },
-    // {
-    //   name: 'Desktop Firefox',
-    //   use: {
-    //     ...devices['Desktop Firefox'],
-    //   },
-    // },
-    // {
-    //   name: 'Desktop Safari',
-    //   use: {
-    //     ...devices['Desktop Safari'],
-    //   },
-    // },
+    /*{
+      name: 'Desktop Firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+      },
+    },
+    {
+      name: 'Desktop Safari',
+      use: {
+        ...devices['Desktop Safari'],
+      },
+    },
     // Test against mobile viewports.
     {
       name: "Mobile Chrome",
       use: {
         ...devices["Pixel 5"],
       },
-    },
+    },*/
     {
       name: "Mobile Safari",
       use: devices["iPhone 12"],
